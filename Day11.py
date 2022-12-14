@@ -358,7 +358,7 @@ class Monkey:
 def ConvertInput():
     monkey_list = []
     i = -1
-    with open('input_day11', 'r') as file:
+    with open('inputs/input_day11', 'r') as file:
         for line in file:
             line = line.strip('\n')
             if line.find('Monkey') > -1:

@@ -86,7 +86,7 @@ def convert_string_to_set(string):
 
 def part1():
     fully_contains_count = 0
-    with open('input_day4', 'r') as file:
+    with open('inputs/input_day4', 'r') as file:
         for line in file:
             assigned_sections1, assigned_sections2 = convert_string_to_set(line)
             if assigned_sections1.issubset(assigned_sections2) or assigned_sections2.issubset(assigned_sections1):
@@ -96,7 +96,7 @@ def part1():
 
 def part2():
     overlapping_count = 0
-    with open('input_day4', 'r') as file:
+    with open('inputs/input_day4', 'r') as file:
         for line in file:
             assigned_sections1, assigned_sections2 = convert_string_to_set(line)
             overlapping_set = assigned_sections1.intersection(assigned_sections2)

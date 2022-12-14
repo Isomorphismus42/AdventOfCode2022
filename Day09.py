@@ -720,7 +720,7 @@ def move_tail(head_position, tail_position):
 def create_movement_list():
     movement_list = []
     max_size = [0, 0, 0, 0]
-    with open('input_day9', 'r') as file:
+    with open('inputs/input_day9', 'r') as file:
         for line in file:
             move, stepsize = line.strip('\n').split(' ')
             stepsize = int(stepsize)

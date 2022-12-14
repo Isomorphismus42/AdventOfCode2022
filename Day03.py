@@ -98,7 +98,7 @@ def char_in_strings(string1, string2, string3=string.ascii_letters):
 
 def part1():
     priorities_sum = 0
-    with open('input_day3', 'r') as file:
+    with open('inputs/input_day3', 'r') as file:
         for line in file:
             line = line.strip('\n')
             mid = int(len(line) / 2)
@@ -110,7 +110,7 @@ def part1():
 
 def part2():
     priorities_sum = 0
-    with open('input_day3', 'r') as file:
+    with open('inputs/input_day3', 'r') as file:
         rucksack1 = file.readline()
         while rucksack1 != '':
             rucksack2 = file.readline()

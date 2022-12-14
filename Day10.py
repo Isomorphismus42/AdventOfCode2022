@@ -343,7 +343,7 @@ import re
 def SignalStrengths():
     signal_strengths = dict()
     x = 1
-    with open('input_day10', 'r') as file:
+    with open('inputs/input_day10', 'r') as file:
         clock = 0
         for line in file:
             clock += 1

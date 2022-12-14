@@ -82,7 +82,7 @@ def create_graph_from_input():
     vertices = set()
     edges = set()
     grid = []
-    with open('input_day12', 'r') as file:
+    with open('inputs/input_day12', 'r') as file:
         for i, line in enumerate(file):
             line = list(line[:-1])
             if 'S' in line:

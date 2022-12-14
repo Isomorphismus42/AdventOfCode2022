@@ -196,7 +196,7 @@ def compare(left, right):
 
 def part1():
     index_sum = 0
-    with open('input_day13', 'r') as file:
+    with open('inputs/input_day13', 'r') as file:
         for i, line in enumerate(file):
             if i % 3 == 0:
                 left_list = json.loads(line)
@@ -215,7 +215,7 @@ def part2():
     divider_packet2 = [[6]]
     index_1 = 1
     index_2 = 2
-    with open('input_day13', 'r') as file:
+    with open('inputs/input_day13', 'r') as file:
         for line in file:
             if not line == '\n':
                 line = json.loads(line)

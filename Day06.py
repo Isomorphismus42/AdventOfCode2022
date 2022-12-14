@@ -68,7 +68,7 @@ import re
 
 
 def part1(marker_length=4):
-    with open('input_day6', 'r') as file:
+    with open('inputs/input_day6', 'r') as file:
         code = file.readline()
         i = 0
         start_of_packet_marker_set = set()

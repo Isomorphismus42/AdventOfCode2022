@@ -62,7 +62,7 @@ def main():
     most_calories = 0
     second_most_calories = 0
     third_most_calories = 0
-    with open('input_day1', 'r') as file:
+    with open('inputs/input_day1', 'r') as file:
         current_sum = 0
         for line in file:
             if line == '\n':

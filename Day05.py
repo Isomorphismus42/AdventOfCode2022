@@ -151,7 +151,7 @@ def convert_instruction(string):
 
 
 def part1():
-    with open('input_day5', 'r') as file:
+    with open('inputs/input_day5', 'r') as file:
         stack_list = read_start_stack_list(file)
         instruction = file.readline()
         while instruction != '':
@@ -168,7 +168,7 @@ def part1():
 
 
 def part2():
-    with open('input_day5', 'r') as file:
+    with open('inputs/input_day5', 'r') as file:
         stack_list = read_start_stack_list(file)
         instruction = file.readline()
         while instruction != '':

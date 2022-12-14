@@ -172,7 +172,7 @@ class FileSystem:
 
 
 def build_file_system() -> FileSystem:
-    with open('input_day7', 'r') as file:
+    with open('inputs/input_day7', 'r') as file:
         # Initialisierung des File-Systems
         file_system = FileSystem()
         current_path = '/root'

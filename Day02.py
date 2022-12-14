@@ -71,7 +71,7 @@ def part1():
     outcome_scores = {'A X': 3, 'A Y': 6, 'A Z': 0,
                       'B X': 0, 'B Y': 3, 'B Z': 6,
                       'C X': 6, 'C Y': 0, 'C Z': 3}
-    with open('input_day2', 'r') as file:
+    with open('inputs/input_day2', 'r') as file:
         for line in file:
             line = line.strip('\n')
             total_score += shape_scores[line[2]]
@@ -86,7 +86,7 @@ def part2():
              'B X': 0+1, 'B Y': 3+2, 'B Z': 6+3,
              'C X': 0+2, 'C Y': 3+3, 'C Z': 6+1}
 
-    with open('input_day2', 'r') as file:
+    with open('inputs/input_day2', 'r') as file:
         for line in file:
             line = line.strip('\n')
             total_score += score[line]

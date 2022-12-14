@@ -89,7 +89,7 @@ import re
 
 def part1():
     tree_matrix = []
-    with open('input_day8', 'r') as file:
+    with open('inputs/input_day8', 'r') as file:
         for line in file:
             line = line.strip('\n')
             tree_matrix.append([int(height) for height in line])
@@ -111,7 +111,7 @@ def part1():
 
 def part2():
     tree_matrix = []
-    with open('input_day8', 'r') as file:
+    with open('inputs/input_day8', 'r') as file:
         for line in file:
             line = line.strip('\n')
             tree_matrix.append([int(height) for height in line])
