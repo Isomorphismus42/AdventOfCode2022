@@ -211,9 +211,21 @@ def part1():
 
 
 def part2():
-    return 0
+    divider_packet1 = [[2]]
+    divider_packet2 = [[6]]
+    index_1 = 1
+    index_2 = 2
+    with open('input_day13', 'r') as file:
+        for line in file:
+            if not line == '\n':
+                line = json.loads(line)
+                if compare(line, divider_packet1):
+                    index_1 += 1
+                    index_2 += 1
+                elif compare(line, divider_packet2):
+                    index_2 += 1
+    return index_1 * index_2
 
 
 if __name__ == "__main__":
-
-    print(part1())
+    print(part2())
