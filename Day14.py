@@ -129,11 +129,15 @@ Using your scan, simulate the falling sand. How many units of sand come to rest 
 cave_system = [[0 for i in range(700)] for j in range(200)]
 def create_cave_system_from_input():
     with open('inputs/input_day14', 'r') as file:
+        y_max = 0
         for line in file:
             line = line[:-1].split(' -> ')
             for i in range(len(line) - 1):
                 x1, y1 = [int(j) for j in line[i].split(',')]
                 x2, y2 = [int(j) for j in line[i + 1].split(',')]
+
+                if max(y1,y2) > y_max:
+                    y_max = max(y1,y2)
 
                 if x1 == x2:
                     if y1 < y2:
@@ -150,14 +154,21 @@ def create_cave_system_from_input():
                         for k in range(x2, x1 + 1):
                             cave_system[y1][k] = 1
 
+    return y_max
 
-def part1():
-    create_cave_system_from_input()
-    endless_void = False
+
+def part1(floor_distance=0, floor_active=False):
+    y_max = create_cave_system_from_input()
+    floor = y_max + floor_distance
+    reached_endless_void = False
     sand_x, sand_y = 500, 0
-    while not endless_void:
-        if sand_y == 199:
-            endless_void = True
+    space_free = True
+    while not reached_endless_void and space_free:
+        if sand_y == y_max + floor_distance + 1:
+            reached_endless_void = True
+        elif floor_active and sand_y == y_max + floor_distance - 1:
+            cave_system[sand_y][sand_x] = 2
+            sand_x, sand_y = 500, 0
         elif not cave_system[sand_y + 1][sand_x]:
             sand_y += 1
         elif not cave_system[sand_y + 1][sand_x - 1]:
@@ -166,6 +177,9 @@ def part1():
         elif not cave_system[sand_y + 1][sand_x + 1]:
             sand_y += 1
             sand_x += 1
+        elif sand_y == 0:
+            cave_system[0][500] = 2
+            space_free = False
         else:
             cave_system[sand_y][sand_x] = 2
             sand_x, sand_y = 500, 0
@@ -177,8 +191,8 @@ def part1():
 
 
 def part2():
-    return 0
+    return part1(2, True)
 
 
 if __name__ == "__main__":
-    print(part1())
+    print(part2())
